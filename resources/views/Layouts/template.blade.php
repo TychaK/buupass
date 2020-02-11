@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('css/weather-icons.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/styles.css')}}"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 @yield('navigation')

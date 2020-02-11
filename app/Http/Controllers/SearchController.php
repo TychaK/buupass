@@ -2,11 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Airport;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
     //
+
+
+    public function search_airport(Request $request)
+    {
+        try {
+            $airports = Airport::where('countryName', 'LIKE', '%kenya%')->get();
+            return view('Elements.airports-dropdown')->with(compact('airports'));
+//            return json_encode($airports);
+        } catch (\Exception $exception) {
+            return json_encode($exception);
+        }
+    }
 
     public function search(Request $request)
     {

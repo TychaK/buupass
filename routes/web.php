@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::post('/search-flight', 'SearchController@search');
+Route::post('/search-place', 'SearchController@search_airport');
