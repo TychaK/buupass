@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::post('/search-flight', 'SearchController@search');
+Route::post('/search-flight', 'SearchController@search_flight');
 Route::post('/search-place', 'SearchController@search_airport');

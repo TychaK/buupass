@@ -39,7 +39,7 @@
                                 </a>
                             </li>
                         </ul>
-                        {{Form::open(['action'=>'SearchController@search','class'=>'','method'=>'POST'])}}
+                        {{Form::open(['action'=>'SearchController@search_flight','class'=>'','method'=>'POST'])}}
                         <div class="tab-content _pt-20">
                             <div class="tab-pane active" id="SearchAreaTabs-4" role="tab-panel">
                                 <div class="theme-search-area theme-search-area-stacked">
@@ -52,11 +52,13 @@
                                                             class="theme-search-area-section first theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr">
                                                             <div class="theme-search-area-section-inner">
                                                                 <i class="theme-search-area-section-icon lin lin-location-pin"></i>
-                                                                {{--                                                                <input class="theme-search-area-section-input typeahead"--}}
-                                                                {{--                                                                       type="text" placeholder="Leaving From"--}}
-                                                                {{--                                                                       data-provide="typeahead"/>--}}
-                                                                {{Form::text('location_from','',['required','class'=>'location_from theme-search-area-section-input typeahead','placeholder'=>'Leaving From','data-provide'=>'typeahead'])}}
+                                                                {{Form::text('location_from','',['required','class'=>'location_from theme-search-area-section-input','placeholder'=>'Leaving From Country','autocomplete'=>'off'])}}
+                                                                {{Form::hidden('loc_from_code','',['required','class'=>'loc_from_code'])}}
+                                                                {{Form::hidden('airport_from_code','',['required','class'=>'airport_from_code'])}}
                                                             </div>
+                                                            <ul class="typeahead dropdown-menu location_from_suggestion_container"
+                                                                role="listbox"
+                                                                style="top: 55px; left: 0px; display: block;"></ul>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 ">
@@ -64,9 +66,14 @@
                                                             class="theme-search-area-section theme-search-area-section-curved theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr">
                                                             <div class="theme-search-area-section-inner">
                                                                 <i class="theme-search-area-section-icon lin lin-location-pin"></i>
-                                                                {{Form::text('location_to','',['required','class'=>'theme-search-area-section-input typeahead','placeholder'=>'Leaving To','data-provide'=>'typeahead'])}}
+                                                                {{Form::text('location_to','',['required','class'=>'location_to theme-search-area-section-input','placeholder'=>'Leaving To (Country)','autocomplete'=>'off'])}}
+                                                                {{Form::hidden('loc_to_code','',['required','class'=>'loc_to_code'])}}
+                                                                {{Form::hidden('airport_to_code','',['required','class'=>'airport_to_code'])}}
                                                             </div>
                                                         </div>
+                                                        <ul class="typeahead dropdown-menu location_to_suggestion_container"
+                                                            role="listbox"
+                                                            style="top: 55px; left: 0px; display: block;"></ul>
                                                     </div>
                                                 </div>
                                             </div>
