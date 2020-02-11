@@ -11,14 +11,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <img src="img/logo.png" alt="Image Alternative text" title="Image Title"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-main">
                 <ul class="nav navbar-nav">
                     <li class="active dropdown">
-                        <a class="dropdown-toggle" href="index.html" data-toggle="dropdown" role="button"
+                        <a class="dropdown-toggle" href="/" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false">Pages</a>
                         <div class="dropdown-menu dropdown-menu-lg">
                             <div class="row">
@@ -26,7 +26,7 @@
                                     <h5 class="dropdown-meganav-list-title">Homepages</h5>
                                     <ul class="dropdown-meganav-list-items">
                                         <li>
-                                            <a href="index.html">Index 1</a>
+                                            <a href="/">Index 1</a>
                                         </li>
                                         <li>
                                             <a href="index-2.html">Index 2</a>
@@ -1083,22 +1083,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="account.html">Preferences</a>
-                            </li>
-                            <li>
-                                <a href="account-notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="account-cards.html">Payment Methods</a>
-                            </li>
-                            <li>
-                                <a href="account-travelers.html">Travelers</a>
-                            </li>
-                            <li>
-                                <a href="account-history.html">History</a>
-                            </li>
-                            <li>
-                                <a href="account-bookmarks.html">Bookmarks</a>
+                                <a href="/my-account">History</a>
                             </li>
                         </ul>
                     </li>
